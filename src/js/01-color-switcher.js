@@ -4,19 +4,24 @@ const stopButton = document.querySelector('button[data-stop]');
 let timerId = null;
 
 stopButton.disabled = true;
+startButton.classList.toggle('btnActive');
 
 startButton.addEventListener("click", () => {
     timerId = setInterval(() => onChangeColor(), 1000);
 
     stopButton.disabled = false;
+    stopButton.classList.toggle('btnActive');
     startButton.disabled = true;
+    startButton.classList.toggle('btnActive');
 });
 
 stopButton.addEventListener("click", () => {
     clearInterval(timerId);
 
     startButton.disabled = false;
+    stopButton.classList.toggle('btnActive');
     stopButton.disabled = true;
+    startButton.classList.toggle('btnActive');
 });
 
 function getRandomHexColor() {

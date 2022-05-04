@@ -62,7 +62,7 @@ img {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.timer-button::after {
+.timer-button.btnActive::after {
   content: "";
   background-color: #ffe54c;
   width: 100%;
@@ -74,7 +74,7 @@ img {
   transition: 0.2s;
 }
 
-.timer-button:hover::after {
+.timer-button.btnActive:hover::after {
   top: 0px;
   left: 0px;
 }
@@ -104,7 +104,7 @@ img {
   background-color: rgba(0, 0, 0, 0);
 }
 
-.switcher-button::after {
+.switcher-button.btnActive::after {
   content: "";
   background-color: #dcbaff;
   width: 100%;
@@ -115,7 +115,7 @@ img {
   left: 7px;
 }
 
-.switcher-button:hover::after {
+.switcher-button.btnActive:hover::after {
   top: 0px;
   left: 0px;
 }
