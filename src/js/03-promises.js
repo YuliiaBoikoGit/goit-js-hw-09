@@ -22,7 +22,7 @@ function createPromise(position, delay) {
   return new Promise((resolve, reject) => {
     const shouldResolve = Math.random() > 0.3;
 
-    const timerID = setTimeout(() => {
+    setTimeout(() => {
       if (shouldResolve) {
         resolve(`✅ Fulfilled promise ${position} in ${delay}ms`);
       }
@@ -52,7 +52,7 @@ function callPromises(amount) {
   };
 
   promiseCounter = 0;
-  clearTimeout(timerID);
+  clearTimeout();
 };
 
 
