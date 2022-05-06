@@ -30,6 +30,7 @@ const options = {
             startBtn.addEventListener('click', onStartBtnClick);
 
             function onStartBtnClick(event) {
+                input.disabled = true;
                 startBtn.disabled = true;
                 startBtn.classList.toggle('btnActive');
                 timerId = setInterval(() => {
